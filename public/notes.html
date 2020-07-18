@@ -32,11 +32,31 @@
       <div class="col-8">
         <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
         <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        <input class="node-journal" placeholder="Journal category" type="text">
       </div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <!-- <script src="/assets/js/index.js"></script> -->
+  <script type="text/javascript">
+// get journal data from server
+    function getJournals() {
+      $.get("api/journals", function (data) {
+        if (data) {
+          let listGroup = $(".list-group");
+          listGroup.empty();
+          for (i = 0; i < data.length; i++) {
+            let trash = $(`<i class="fas fa-trash-alt delete" index=${i}></i>`);
+            listGroup.append(
+              $("<li>").attr("class", "list-group-item").attr("index", i).text(data[i].title).append(trash),
+            )
+          }
+        }
+      })
+    }
+
+    getJournals();
+  </script>
 </body>
 
 </html>
