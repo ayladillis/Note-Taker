@@ -30,7 +30,7 @@ Then open in your preferred text editor:
 - [visual studio code]() 
 
 ## Code Highlight
-This code snippet is where I 
+This code snippet is where I posted my note to the body of journal, using the variables reqBody and notes. 
 
 ![code screenshot](screenshot1.png)
 
