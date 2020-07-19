@@ -35,7 +35,7 @@ app.delete("/api/notes/:id", function(req, res) {
       return true;
     }
   })
-  
+
     fs.writeFileSync("./db/db.json", JSON.stringify(notes));
     res.json(notes);
 });

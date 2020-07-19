@@ -1,6 +1,6 @@
 # Note-Taker
 
-![gif demo]( )
+![gif demo](https://media.giphy.com/media/d7Slxyu52OueLuLABN/giphy.gif)
 
 ## Table of Content
 - Objective
@@ -30,8 +30,9 @@ Then open in your preferred text editor:
 - [visual studio code]() 
 
 ## Code Highlight
+This code snippet is where I 
 
-![code screenshot]( )
+![code screenshot](screenshot1.png)
 
 
 ## Technology
