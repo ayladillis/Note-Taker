@@ -24,12 +24,20 @@ app.post("/api/notes", function(req, res){
 })
 
 app.delete("/api/notes/:id", function(req, res) {
-  var Id = req.params.id;
+  var noteId = req.params.id;
+  console.log(noteId);
   notes = fs.readFileSync("./db/db.json");
   notes = JSON.parse(notes);
-  notes = notes.filter(function(note){
-    
+  notes = notes.filter(function(note) {
+    if (noteId === note.id ) {
+      return false;
+    }else{
+      return true;
+    }
   })
-})
+  
+    fs.writeFileSync("./db/db.json", JSON.stringify(notes));
+    res.json(notes);
+});
 
 };
